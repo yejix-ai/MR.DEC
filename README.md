@@ -53,8 +53,12 @@ pip install transformers timm wandb pillow
 
 Place your data and weights outside the repo (or adjust paths in the scripts). Required inputs:
 
-- **CSV**: admission demo, ICD, lab, med (paths set in `main.sh`).
-- **CXR pretrained weights**: e.g. EVA-X `.pt`; path set via `--cxr_pretrained_path`.
+- **Datasets**:
+  - **MIMIC-IV EHR (v3.1)**: [https://physionet.org/content/mimiciv/3.1](https://physionet.org/content/mimiciv/3.1) (CSV: admission demo, ICD, lab, med; paths set in `main.sh`).
+  - **MIMIC-CXR (v2.1.0)**: [https://physionet.org/content/mimic-cxr/2.1.0](https://physionet.org/content/mimic-cxr/2.1.0)
+- **Pretrained Weights**:
+  - **EVA-X**: [https://github.com/hustvl/EVA-X](https://github.com/hustvl/EVA-X) (CXR pretrained weights e.g., `.pt`; path set via `--cxr_pretrained_path`).
+  - **ModernBERT**: [https://huggingface.co/answerdotai/ModernBERT-base](https://huggingface.co/answerdotai/ModernBERT-base)
 
 No CSV or `.pt` files are committed; see `.gitignore`.
 
