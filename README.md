@@ -59,16 +59,21 @@ Place your data and weights outside the repo (or adjust paths in the scripts). R
 - **Pretrained Weights**:
   - **EVA-X**: [https://github.com/hustvl/EVA-X](https://github.com/hustvl/EVA-X) (CXR pretrained weights e.g., `.pt`; path set via `--cxr_pretrained_path`).
   - **ModernBERT**: [https://huggingface.co/answerdotai/ModernBERT-base](https://huggingface.co/answerdotai/ModernBERT-base)
-
-No CSV or `.pt` files are committed; see `.gitignore`.
-
 ---
 
-## Running training
+## Running
 
 From the repo root (`MR.DEC`):
+### 1. Data Preprocessing
 
-1. Edit `main.sh`: set `DEMO_FILE`, `ICD_FILE`, `LAB_FILE`, `MED_FILE`, `CXR_PRETRAINED` to your paths.
+First, run the preprocessing script to prepare the cohort data:
+
+```bash
+python get_mimic_cohort3.1.py \
+  --raw_data_dir "path_to_MIMIC-IV_dir" \
+  --cxr_data_dir "path_to_MIMIC-CXR-JPG_dir" \
+  --save_dir "path_to_your_dir"
+```
 2. Run:
 
 ```bash
