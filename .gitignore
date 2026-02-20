@@ -1,0 +1,53 @@
+# Large data files (do not commit to GitHub)
+*.csv
+*.pt
+*.pth
+*.pth.tar
+*.ckpt
+*.safetensors
+
+# Images and media
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.bmp
+*.tiff
+*.dcm
+*.nii
+*.nii.gz
+
+# Directories that often contain weights/large data (data/ here is Python package, keep it)
+save/
+checkpoints/
+pretrained_weight/
+*.zip
+*.tar
+*.tar.gz
+
+# Python
+__pycache__/
+*.py[cod]
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+.env
+.venv/
+venv/
+
+# IDE / OS
+.DS_Store
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs and wandb
+wandb/
+*.log
+log.txt
+
+# Feature cache
+cache/
